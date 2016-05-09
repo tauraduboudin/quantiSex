@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// estimate the expected Fst value in a metapoluation following:
+// Effective size in simple metapopulation models ; F Rousset ; Heredity ; 2003
 double fst(const int nDemes, const int maxIndPerDem, const double extinction, const int recolonization, const double migration);
 
 int main(int argc, char *argv[]){
