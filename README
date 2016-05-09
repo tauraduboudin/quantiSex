@@ -1,0 +1,10 @@
+quantiSex is a simulator of metapopulations. Demes are composed of hermaphrodites, with optional super-males or super-females.
+The code needs the C library GSL, and the R library diveRsity
+
+Compilation:
+gcc quantiSex.c -L/usr/local/lib -lgsl -lgslcblas -lm -Wall -Wextra -Wshadow -Werror -O3 -o quantiSex
+
+Help:
+./quantiSex
+
+
