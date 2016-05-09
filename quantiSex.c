@@ -951,8 +951,8 @@ void statisticsPopulations(Deme* population, const int nDemes, const int maxIndP
 		
 		cosexualProportion = cosexualProportion / nIndividusTotal;
 	
-		fstValue = fst(maxIndPerDem, extinction, recolonization, migration);
-		fstValueDensity = fst((int) nIndividusTotal/(1.0*nDemes), extinction, recolonization, migration);
+		fstValue = fst(maxIndPerDem, extinction, recolonization, migration); // expected fst assuming that all demes are full
+		fstValueDensity = fst((int) nIndividusTotal/(1.0*nDemes), extinction, recolonization, migration); // expected fst, using the the average number of individuals in demes (for cases with high extinction, low fecundity)
 	
 		free(allocFemale);
 		free(allocFemaleCosexual);
