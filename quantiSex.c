@@ -237,7 +237,7 @@ void configMetapop(gsl_rng* r, Deme* population, const int nDemes, const double 
 			}
 		}
 		if(nHeterogametic == population[i].nIndividus){
-			printf("PROUT deme: %d\n", i);
+			printf("Deme with only one sex: %d\n", i);
 			extinctionStatus[i] = 1;
 		}
 
