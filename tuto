@@ -1,0 +1,16 @@
+# compiler le simulateur
+gcc sexAllocation.c -L/usr/local/lib  -lgsl -lgslcblas -lm -Wall -Wextra -Wshadow -Werror -O3 -o quantiSex
+
+# donner les droits d execution aux codes Python
+chmod +x statsQuantiSex.py 
+chmod +x submitQuantiSex.py
+
+# appeler l'aide du simulateur
+./quantiSex
+
+# statsQuantiSex.py lit dans le stdin de quantiSex et attend en arguments les mêmes que quantiSex, dans le mm ordre
+quantiSex 100 100 2000 20 0.00001 1 0.0001 10 2 0 1 123  | statsQuantiSex.py 100 100 2000 20 0.00001 1 0.0001 10 2 0 1 123 >>res
+
+# lancer quantiSex | statsQuantiSex pour plusieurs valeurs de paramètres
+./submitQuantiSex.py
+
