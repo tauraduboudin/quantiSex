@@ -4,6 +4,8 @@ The code needs the C library GSL, and the R library diveRsity
 Compilation:
 gcc quantiSex.c -L/usr/local/lib -lgsl -lgslcblas -lm -Wall -Wextra -Wshadow -Werror -O3 -o quantiSex
 
+Please link the R script diveRsity.R (calling library(diveRsity)) in your bin/
+
 Help:
 ./quantiSex
 
